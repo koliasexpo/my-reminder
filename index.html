@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0e1022">
+  <title>My Reminder</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%236a5cff'/%3E%3Cpath d='M6 12h20' stroke='%23fff' stroke-width='2'/%3E%3Ccircle cx='16' cy='20' r='4' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <script src="vendor/sqljs/sql-wasm.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <nav class="nav" aria-label="Κύριο μενού">
+      <span class="brand">My Reminder</span>
+      <div class="nav-links" id="nav"></div>
+    </nav>
+    <div class="main">
+      <header class="top">
+        <h1 id="page-title"></h1>
+        <div class="top-actions" id="top-actions"></div>
+        <button class="bell" id="bell" aria-label="Ειδοποιήσεις" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 22a2.5 2.5 0 0 0 2.4-2h-4.8A2.5 2.5 0 0 0 12 22Zm7-6v-5a7 7 0 0 0-5.5-6.8V3.5a1.5 1.5 0 0 0-3 0v.7A7 7 0 0 0 5 11v5l-2 2v1h18v-1l-2-2Z"/></svg>
+          <span class="bell-count" id="bell-count" hidden></span>
+        </button>
+      </header>
+      <main id="view" tabindex="-1"></main>
+    </div>
+  </div>
+  <section class="notif-panel" id="notif-panel" hidden aria-label="Ειδοποιήσεις"></section>
+  <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
