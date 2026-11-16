@@ -15,7 +15,7 @@ export default {
       confirmDialog('Τα δεδομένα του κινητού θα αντικατασταθούν από αυτά του αρχείου. Να συνεχίσω;', 'Αντικατάσταση', async () => {
         await replaceWith(bytes);
         toast('Τα δεδομένα μεταφέρθηκαν.');
-        setTimeout(() => { location.hash = '#/calendar'; location.reload(); }, 600);
+        setTimeout(() => { location.hash = '#/cashbox'; location.reload(); }, 600);
       });
     }) });
 
