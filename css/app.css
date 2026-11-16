@@ -289,3 +289,33 @@ details.expected summary b { margin-left: auto; font-variant-numeric: tabular-nu
 .data-box { background: var(--surface); border: 1px solid var(--line-soft); border-radius: var(--r-m); padding: 18px; display: grid; gap: 10px; }
 .data-box h2 { font-size: 17px; margin: 0; }
 .data-box p { margin: 0; color: var(--muted); line-height: 1.5; }
+
+/* Ταμείο ως αρχική οθόνη: ποσό, αναμενόμενα και τετράγωνα που ανοίγουν οθόνες */
+.cash-dash { display: grid; gap: 14px; max-width: 640px; }
+.grand.hero { border-radius: var(--r-l); padding: 26px 22px; }
+.cash-exp { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; text-align: left; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--line-soft); border-radius: var(--r-m); padding: 14px; }
+.exp-cell { display: grid; gap: 2px; min-width: 0; }
+.exp-cell small { font-size: 12px; color: var(--muted); line-height: 1.25; }
+.exp-cell b { font: 700 16px/1.2 var(--num); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.exp-cell b.collect { color: #5fd38d; } .exp-cell b.pay { color: var(--late); }
+.exp-cell.final { border-left: 1px solid var(--line); padding-left: 10px; }
+.tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.tile { display: grid; align-content: space-between; justify-items: start; gap: 10px; aspect-ratio: 1 / .82; text-align: left;
+  padding: 16px; border-radius: var(--r-l); border: 1px solid var(--line-soft); background: var(--surface); color: var(--ink); }
+.tile svg { width: 34px; height: 34px; padding: 6px; border-radius: 10px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.tile b { font: 700 18px/1.2 var(--num); }
+.tile small { display: block; color: var(--muted); font-size: 13px; margin-top: -6px; }
+.tile:active { transform: scale(.98); }
+.t-add svg { background: color-mix(in srgb, var(--brand) 25%, transparent); color: var(--brand); }
+.t-in svg { background: rgba(95, 211, 141, .18); color: #5fd38d; }
+.t-out svg { background: color-mix(in srgb, var(--late) 20%, transparent); color: var(--late); }
+.t-list svg { background: rgba(255, 196, 87, .16); color: #ffc457; }
+.screen { gap: 14px; }
+.screen-head { display: flex; align-items: center; gap: 10px; }
+.screen-head h2 { font: 600 22px/1.2 var(--num); margin: 0; }
+.back { width: 42px; padding: 0; font-size: 24px; }
+.hint { color: var(--muted); font-size: 14px; margin: 0 0 10px; }
+.m-sheet { display: grid; gap: 14px; }
+.m-sheet .big-amount { font: 700 30px var(--num); text-align: right; min-height: 56px; }
+.m-sheet .btn.primary { min-height: 50px; font-size: 17px; }
