@@ -7,7 +7,8 @@ import { el, fail } from './ui.js';
 import { VERSION } from './version.js';
 import { poll, startNotifications } from './notifications.js';
 
-const views = [calendar, pending, cashbox, data];
+// Το Ταμείο είναι η αρχική οθόνη.
+const views = [cashbox, calendar, pending, data];
 const nav = document.getElementById('nav');
 const root = document.getElementById('view');
 const actions = document.getElementById('top-actions');
